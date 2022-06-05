@@ -35,13 +35,18 @@ $ yarn start
 ```
 # Gist
 
-La pagina tiene el header de busqueda en el layout y cada una de las paginas es un entry en webpack.
-Tome esta decisión por considerar que podrian ser dos equipos distintos quienes hacen estas tareas (resultado de busqueda y detalle) y permite tener navegación con node sin la necesidad de usar react route y hacer una single page application. 
+Para la realización de esta prueba elegí utilizar las últimas versiones de node y react. Esta decisión me permitió concer los cambios que tenían, además fue una oportunidad para actualizarme y utilizar nuevas herramientas.
+
+El resultado es un servidor node/express que tiene la API y sirve las tres páginas: home, búsequeda y detalle.
 
 # Details
 
-Hice la api y la web en el mismo server por considerarse de un prototipo, podrian haber sido dos node pero no crei que sumara al resultado final.
-La decisión de hacer el header en el layout es debido a que podria ser un componente que provee el equipo que tiene la home de Mercado libre y tiene el unico comportamiento de hacer un redirect a un resultado de busqueda.
+Hice la API y las páginas proveídas por el mismo servidor por tratarse de un prototipo. Podrían haber sido dos node pero no cosideré que sumara al resultado final.
 
-Agregue un par de test para confirmar el rendering de las dos paginas.
+La decisión de hacer el header en el layout se basa en que podría ser un componente que provee el equipo que tiene la home de Mercado libre. El único comportamiento que tiene es hacer un redirect a un resultado de búsqueda.
+
+Al hacer el build del código se puede ver que el front tiene dos scripts, tomé esta decisión por considerar que podrían ser dos equipos distintos los que hacen estas tareas (resultado de búsqueda y detalle). Esto permite tener navegación contra el servidor sin la necesidad de hacer una single page application y ruteo en la web. 
+
+
+Agregué al código un par de test para confirmar el rendering de las dos páginas.
     
